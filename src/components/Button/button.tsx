@@ -1,4 +1,5 @@
 import * as stylex from "@stylexjs/stylex";
+import { ComponentProps } from "react";
 
 const styles = stylex.create({
   button: {
@@ -9,12 +10,16 @@ const styles = stylex.create({
     },
   },
 });
-type Props = {
+interface ButtonProps extends ComponentProps<"button"> {
   text: string;
-};
+}
 
-const Button = ({ text }: Props) => {
-  return <button {...stylex.props(styles.button)}>{text}</button>;
+const Button = ({ children, ...rest }: ButtonProps) => {
+  return (
+    <button {...stylex.props(styles.button)} {...rest}>
+      {children}
+    </button>
+  );
 };
 
 export default Button;
