@@ -1,6 +1,6 @@
 {
   "name": "@ajaxecho3/stylui",
-  "version": "0.0.2",
+  "version": "0.0.5",
   "description": "",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
@@ -10,7 +10,8 @@
   ],
   "scripts": {
     "dev": "rollup -c --watch",
-    "build": "rollup -c"
+    "build": "rollup -c",
+    "publish": "npm run build && npm publish"
   },
   "keywords": [],
   "author": "@ajaxecho3",

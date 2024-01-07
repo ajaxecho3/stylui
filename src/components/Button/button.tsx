@@ -10,9 +10,7 @@ const styles = stylex.create({
     },
   },
 });
-interface ButtonProps extends ComponentProps<"button"> {
-  text: string;
-}
+interface ButtonProps extends ComponentProps<"button"> {}
 
 const Button = ({ children, ...rest }: ButtonProps) => {
   return (
