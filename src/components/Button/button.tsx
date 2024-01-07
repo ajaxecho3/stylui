@@ -1,3 +1,4 @@
+import React from "react";
 import * as stylex from "@stylexjs/stylex";
 import { ComponentProps } from "react";
 
@@ -10,9 +11,9 @@ const styles = stylex.create({
     },
   },
 });
-interface ButtonProps extends ComponentProps<"button"> {}
+export interface ButtonProps extends ComponentProps<"button"> {}
 
-const Button = ({ children, ...rest }: ButtonProps) => {
+const Button: React.FC = ({ children, ...rest }: ButtonProps) => {
   return (
     <button {...stylex.props(styles.button)} {...rest}>
       {children}
